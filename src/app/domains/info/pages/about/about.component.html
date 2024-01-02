@@ -1,0 +1,17 @@
+<p>
+  <input
+    type="number"
+    [value]="duration()"
+    (change)="changesDuration($event)"
+  />
+</p>
+<p>
+  <input type="text" [value]="message()" (change)="changesMessage($event)" />
+</p>
+<p>
+  <app-counter
+    [duration]="duration()"
+    [message]="message()"
+    *ngIf="duration() > 0"
+  />
+</p>
